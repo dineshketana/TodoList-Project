@@ -222,3 +222,16 @@ body.dark #toggleModeBtn {
     margin-left: 8px;
   }
 }
+
+#dueDateInput::placeholder {
+  color: black;
+  opacity: 1; /* Ensures full visibility on some browsers */
+}
+
+#dueDateInput:-ms-input-placeholder { /* IE 10-11 */
+  color: black;
+}
+
+#dueDateInput::-ms-input-placeholder { /* Microsoft Edge */
+  color: black;
+}
