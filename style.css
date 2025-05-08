@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url('./background.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #f4f1ea;
+  color: #000;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Light overlay */
+  pointer-events: none;
+  z-index: -1;
+}
+
+body.dark {
+  background: url('./background.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark::before {
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.header h1 {
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #9f4c4c;
+  font-size: 14px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 40px;
+  border-radius: 50px;
+  background-color: rgb(222, 219, 219);
+  height: auto;
+}
+
+body.dark .container {
+  background-color: #1e1e1e;
+}
+
+#taskInput, #dueDateInput {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  border: none;
+}
+
+#addTaskBtn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+#taskList {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+#taskList li {
+  background-color: #d1d1d1;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark #taskList li {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+#taskList li.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+body.dark #taskList li.completed {
+  color: #888;
+}
+
+#taskList li button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+body.dark #taskList li button {
+  color: #f0f0f0;
+}
+
+#toggleModeBtn {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+}
+
+body.dark #toggleModeBtn {
+  background-color: #444;
+  color: #f0f0f0;
+}
