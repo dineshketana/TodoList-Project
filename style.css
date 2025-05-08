@@ -129,3 +129,44 @@ body.dark #toggleModeBtn {
   background-color: #444;
   color: #f0f0f0;
 }
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+  }
+
+  #taskInput, #dueDateInput {
+    width: 100%;
+  }
+
+  #addTaskBtn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header p {
+    font-size: 12px;
+  }
+
+  #taskList li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #taskList li div:last-child {
+    align-self: flex-end;
+  }
+
+  #toggleModeBtn {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
