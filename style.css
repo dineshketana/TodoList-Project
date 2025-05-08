@@ -6,6 +6,12 @@ body {
   background-size: cover;
   background-color: #f4f1ea;
   color: #000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 body::before {
@@ -15,7 +21,8 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.2); /* Light overlay */
+  background: rgba(255, 255, 255, 0.2);
+  /* Light overlay */
   pointer-events: none;
   z-index: -1;
 }
@@ -28,7 +35,8 @@ body.dark {
 }
 
 body.dark::before {
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.5);
+  /* Dark overlay */
 }
 
 .header h1 {
@@ -55,7 +63,8 @@ body.dark .container {
   background-color: #1e1e1e;
 }
 
-#taskInput, #dueDateInput {
+#taskInput,
+#dueDateInput {
   width: 80%;
   padding: 10px;
   margin: 5px 0;
@@ -129,44 +138,68 @@ body.dark #toggleModeBtn {
   background-color: #444;
   color: #f0f0f0;
 }
+
 /* Responsive design for mobile screens */
 @media (max-width: 768px) {
-  .container {
-    width: 90%;
+  body {
     padding: 20px;
-    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+    padding: 30px 20px;
+    margin: auto;
     border-radius: 20px;
-  }
-
-  #taskInput, #dueDateInput {
-    width: 100%;
-  }
-
-  #addTaskBtn {
-    width: 100%;
-    margin-top: 10px;
+    box-sizing: border-box;
   }
 
   .header h1 {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 8px;
   }
 
   .header p {
     font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  #toggleModeBtn {
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .form input,
+  #addTaskBtn {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  #addTaskBtn {
+    width: 70px;
+    padding: 12px;
+    font-size: 16px;
   }
 
   #taskList li {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    padding: 12px;
+    font-size: 14px;
   }
 
   #taskList li div:last-child {
     align-self: flex-end;
+    margin-top: 10px;
   }
 
-  #toggleModeBtn {
-    width: 100%;
-    margin: 10px 0;
+  #taskList li button {
+    font-size: 16px;
+    margin-left: 8px;
   }
 }
