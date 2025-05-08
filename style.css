@@ -223,15 +223,21 @@ body.dark #toggleModeBtn {
   }
 }
 
-#dueDateInput::placeholder {
+input[type="date"] {
   color: black;
-  opacity: 1; /* Ensures full visibility on some browsers */
+  background-color: white; /* or any contrasting background */
 }
 
-#dueDateInput:-ms-input-placeholder { /* IE 10-11 */
+/* Chrome, Safari, Edge (WebKit/Blink) */
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
   color: black;
 }
 
-#dueDateInput::-ms-input-placeholder { /* Microsoft Edge */
-  color: black;
+/* Optional: makes the calendar icon darker */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0);
 }
