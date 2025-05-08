@@ -140,7 +140,20 @@ body.dark #toggleModeBtn {
 }
 
 /* Responsive design for mobile screens */
+/* Responsive design for mobile screens */
 @media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     padding: 20px;
     display: flex;
@@ -151,39 +164,44 @@ body.dark #toggleModeBtn {
 
   .container {
     width: 100%;
-    padding: 30px 20px;
+    max-width: 90vw; /* Prevents overflowing width */
+    padding: 20px;
     margin: auto;
     border-radius: 20px;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .header h1 {
     font-size: 22px;
     margin-bottom: 8px;
+    text-align: center;
   }
 
   .header p {
     font-size: 12px;
     margin-bottom: 15px;
+    text-align: center;
   }
 
   #toggleModeBtn {
     padding: 8px 12px;
     font-size: 14px;
     margin-bottom: 20px;
+    max-width: 300px;
   }
 
-  .form input,
-  #addTaskBtn {
+  .form input{
     width: 100%;
     font-size: 14px;
     margin-top: 8px;
   }
 
   #addTaskBtn {
-    width: 70px;
     padding: 12px;
-    font-size: 16px;
+    width: 80px;
+    font-size: 14px;
+    margin-top: 8px;
   }
 
   #taskList li {
@@ -191,6 +209,7 @@ body.dark #toggleModeBtn {
     align-items: flex-start;
     padding: 12px;
     font-size: 14px;
+    word-break: break-word;
   }
 
   #taskList li div:last-child {
